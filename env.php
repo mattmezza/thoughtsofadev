@@ -1,4 +1,4 @@
 <?php
 
-putenv("env=development");
-// putenv("env=production");
+// putenv("env=development");
+putenv("env=production");
