@@ -1,0 +1,32 @@
+title->Super Simple Backup System for Mysql and Ftp
+author->Matteo Merola
+tags->nerd, backup, mysql, KISS
+image->/public/content/backupsystem.jpg
+---:endmetadata:---
+---:startbio:---
+<p>I really like to help people to achive their goals with the maximum result. I like to design, develop and mantain large software systems. What makes me really happy is to see people use what I create.</p>
+---:endbio:---
+<h2><strong>A 'KeepItSuperSimple' backup system for mysql and ftp</strong></h2>
+<p>Hi all, I would like to share with you some script I use to backup my websites. These scripts are in bash and perform the backup of mysql and ftp within a cronjob.</p>
+<p>First you need to create a folder for your scripts
+<code>mkdir /home/matt/scripts</code></p>
+<p>Then you need to create a folder for each website you want to backup (<em>imagine you want to backup mysite.com</em>)
+<code>mkdir /home/matt/scripts/mysite.com</code></p>
+<p>Now create the folders that will contain your backups as follow:
+<code>cd /home/matt/scripts/mysite.com &amp;&amp; mkdir mysql ftp temp</code></p>
+<h6><em>temp folder is needed by the system in order to backup correctly</em></h6>
+<p>Now you can create a file named <code>mysqlbackup.sh</code> and a file named <code>ftpbackup.sh</code> as follows</p>
+<script src="https://gist.github.com/mattmezza/d2b868ce51030c9b908b.js"></script>
+<h4>You have to edit these files by providing the valid credentials to connect to mysql and ftp properly.</h4>
+<h5>You can also edit these two files to change the retention of the backup files. Standard is 15  tar archives (one per day) for mysql and 2 archives (one per week) for ftp.</h5>
+<p>Make these file executable by entering this <code>chmod +x /home/matt/scripts/ftpbackup.sh</code> and <code>chmod +x /home/matt/scripts/mysqlbackup.sh</code>.</p>
+<p>Now whenever you execute <code>./mysqlbackup.sh mysite.com</code> or <code>./ftpbackup.sh mysite.com</code> the system starts backing up your website.</p>
+<p>You can automate this procedure by creating a cronjob.</p>
+<p>Enter <code>sudo crontab -e</code> to access the cronjob tab.</p>
+<p>Now edit the file inserting (at the end of the file) this row:</p>
+<p><code>01 19 * * *     cd /home/matt/scripts &amp;&amp; ./mysqlbackup.sh mysite.com</code></p>
+<h6><em>it says: &quot;backup mysql every day at 7:01 pm&quot;</em></h6>
+<p>For ftp insert another row:
+<code>01 20 * * 0     cd /home/matt/scripts &amp;&amp; ./ftpbackup.sh mysite.com</code></p>
+<h6><em>it says: &quot;backup ftp every week, on sunday at 8:01 pm&quot;</em></h6>
+<p>It should work (I hope so 😝) but I'm opened to whom would like to criticize my work in order to achieve the best and simplest backup system for mysql and/or ftp.</p>

@@ -1,0 +1,1 @@
+I really like to help people to achive their goals with the maximum result. I like to design, develop and mantain large software systems. What makes me really happy is to see people use what I create.
