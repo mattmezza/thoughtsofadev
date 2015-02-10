@@ -4,11 +4,11 @@ tags->IT Project Management
 image->/public/content/IT-Project-Management.jpg
 ---:endmetadata:---
 
-## Context
+### Context
 
 Many people and organizations have a new or renewed interest in project management. Mostly it is due to the fact that the number of projects is constantly growing and the complexity of the projects is increasing.
 
-## Project
+### Project
 
 > "A project is a __temporary endeavor__ undertaken to create a _unique_ product, service or result."
 
@@ -16,7 +16,7 @@ Obviously, an IT project involves the use of hardware, software, and networks. F
 The triple constraint of project management is regarding the management of **scope**, **time** and **costs**.
 A good project manager is crucial to the project success.
 
-## Project Management
+### Project Management
 
 It is the application of **knowledge**, **skills**, **tools** and **techniques** to project activities to meet requirements. The people who are involved into a project, by any means or activities, are called _**Stakeholders**_.
 There has been defined a framework that tried to standardize Project Management. This framework includes the management of _project stakeholders_, _project management tools and techniques_ and _project management knowledge areas_.
@@ -33,21 +33,21 @@ There are 10 project management knowledge areas:
 9. Project Procurement Management;
 10. Project Stakeholder Management.
 
-## Program
+### Program
 
 > "A program is a **group of related projects** managed in a **coordinated way**."
 
 This coordination is necessary in order to obtain benefits and control that are not available from managing each project separately.
 
-## Project Portfolio Management
+### Project Portfolio Management
 
 It is a process that involves organizing and managing projects and programs as a portfolio of investments that contribute to the entire organization's success. It emphasizes meeting **strategic goals**. Project Management, instead, focuses on meeting **tactical goals**.
 
-## Project Manager
+### Project Manager
 
 He plays a **key role** in helping projects to succeed. He works closely with other stakeholders and performs various duties. He must possess many skills: from **hard skills** like general management, project management and IT in general to **soft skills** like _leadership_. These skills are necessary to act in the right way when performing the day-to-day job. An experienced project manager, in fact, helps a project to succeed.
 
-## P.M.I.
+### P.M.I.
 
 The **Project Management Institute** is an international professional society that provides certification as a _Project Management Professional_ (_PMP_) and uphold a code of ethics.
 
