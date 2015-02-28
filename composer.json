@@ -1,7 +1,6 @@
 {
     "require": {
         "klein/klein": "2.1",
-        "austinhyde/iniparser": "dev-master",
         "suin/php-rss-writer": ">=1.0",
         "voodoophp/handlebars": "2.*",
         "erusev/parsedown-extra": "dev-master"

@@ -12,7 +12,7 @@ class BlogManager {
   private $cache;
 
   public function __construct($articleDir, $postPerPage, $siteUrl, $cache) {
-    $this->articleDir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'application' . DIRECTORY_SEPARATOR . $articleDir . DIRECTORY_SEPARATOR;
+    $this->articleDir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $articleDir . DIRECTORY_SEPARATOR;
     $this->postPerPage = $postPerPage;
     $this->siteUrl = $siteUrl;
     $this->cache = $cache;

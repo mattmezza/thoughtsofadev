@@ -1,0 +1,46 @@
+{
+    "development": {
+        "blog": {
+            "timezone": "Europe/Rome",
+            "locale": "it_IT.UTF-8",
+            "url": "http://bloggy.dev/",
+            "title": "Thoughts of a Dev",
+            "description": "Impressions and feelings about software and development.",
+            "author": {
+                "name": "Matteo Merola",
+                "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+                "twitter": "_mattmezza_",
+                "facebook": "matteo.merola"
+            },
+            "theme": "default",
+            "posts": {
+                "dir": "posts",
+                "draftdir": "drafts",
+                "perpage": 5
+            },
+            "cache": false
+        }
+    },
+    "production": {
+        "blog": {
+            "timezone": "Europe/Rome",
+            "locale": "en_US.UTF-8",
+            "url": "http://blog.matteomerola.me/",
+            "title": "Thoughts of a Dev",
+            "description": "Impressions and feelings about software and development.",
+            "author": {
+                "name": "Matteo Merola",
+                "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+                "twitter": "_mattmezza_",
+                "facebook": "matteo.merola"
+            },
+            "theme": "default",
+            "posts": {
+                "dir": "posts",
+                "draftdir": "drafts",
+                "perpage": 5
+            },
+            "cache": true
+        }
+    }
+}
