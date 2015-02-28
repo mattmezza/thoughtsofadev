@@ -5,6 +5,9 @@ use \Fleet\BlogManager;
 use \Fleet\BlogRsser;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
+use \Suin\RSSWriter\Feed;
+use \Suin\RSSWriter\Channel;
+use \Suin\RSSWriter\Item;
 
 include("env.php");
 
@@ -177,14 +180,29 @@ $app->respond('GET', '/api/json', function ($request, $response, $service) use (
   echo json_encode($app->blog->get_posts(1, 10));
 });
 // Show the RSS feed
-$app->respond('GET', '/rss', function ($request, $response, $service) use ($app) {
+$app->respond('GET', '/feed/rss', function ($request, $response, $service) use ($app) {
   header('Content-Type: application/rss+xml');
   $url = $app->config->blog->url;
   $title = $app->config->blog->title;
   $description = $app->config->blog->description;
-  $rss = new BlogRsser($title, $description, $url);
-  // Show an RSS feed with the 30 latest posts
-  echo $rss->generate_rss($app->blog->get_posts(1, 30));
+  $feed = new Feed();
+  $channel = new Channel();
+  $channel
+    ->title($title)
+    ->description($description)
+    ->url($url)
+    ->appendTo($feed);
+  // the latest 30 posts
+  $posts = $app->blog->get_posts(1, 30);
+  foreach($posts as $p){
+    $item = new Item();
+    $item
+      ->title($p->title)
+      ->description($p->body)
+      ->url($p->url)
+      ->appendTo($channel);
+  }
+  echo $feed;
 });
 
 

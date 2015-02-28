@@ -1,5 +1,5 @@
 <?php
-namespace Fleet;
+namespace Bloggy;
 
 use \ParsedownExtra;
 

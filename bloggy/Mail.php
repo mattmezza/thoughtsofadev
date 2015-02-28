@@ -1,10 +1,10 @@
 <?php
 
-namespace Fleet;
+namespace Bloggy;
 
 class Mail {
 
-	public function __construct($to, $subject, $message, $replyTo, $from, $xmailer = 'Fleet/PHP') {
+	public function __construct($to, $subject, $message, $replyTo, $from, $xmailer = 'Bloggy/PHP') {
 		$this->xmailer = $xmailer;
 		$this->to = $to;
 		$this->subject = $subject;

@@ -25,7 +25,6 @@
             "theme": "default",
             "posts": {
                 "dir": "posts",
-                "draftdir": "drafts",
                 "perpage": 5
             },
             "pages": {
@@ -66,7 +65,6 @@
           "theme": "default",
           "posts": {
               "dir": "posts",
-              "draftdir": "drafts",
               "perpage": 5
           },
           "pages": {
