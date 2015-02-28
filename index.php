@@ -6,8 +6,7 @@ use \Fleet\BlogRsser;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
 
-putenv("env=development");
-// putenv("env=production");
+include("env.php");
 
 function error_handler($error) {
   header("Location: /i-am-so-sorry");
