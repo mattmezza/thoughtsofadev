@@ -107,9 +107,9 @@ class BlogManager {
         $toCache = $matches[0]."\n";
         $metadata = preg_replace('/[-]+:endmetadata:[-]+/', "", $matches[0]);
         $post->metas = json_decode($metadata);
-        if($post->metas->title)
+        if(isset($post->metas->title))
           $post->title = $post->metas->title;
-        if($post->metas->author) {
+        if(isset($post->metas->author)) {
           if($this->authors->{$post->metas->author})
             $post->metas->author = $this->authors->{$post->metas->author};
         }
