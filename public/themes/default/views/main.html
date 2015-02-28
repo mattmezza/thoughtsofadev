@@ -33,13 +33,13 @@
         <h2><a href="{{url}}">{{title}}</a></h2>
         <div class="header">
           <span class="date">{{#format_date_with_locale date '%A %e %B %Y'}}</span>
-          {{#if author}}
-           by <span class="author">{{{author}}}</span>
+          {{#if metas.author}}
+           by <span class="author">{{{metas.author.name}}}</span>
           {{/if}}
-          {{#if tags}}
+          {{#if metas.tags}}
             <span class="tags">
               <ul>Tags:
-                {{#each tags}}
+                {{#each metas.tags}}
                   <li>
                     {{{.}}}
                   </li>
@@ -48,8 +48,8 @@
             </span>
           {{/if}}
         </div>
-        {{#if image}}
-          <img alt="{{title}}" src="{{image}}" class="post-cover">
+        {{#if metas.image}}
+          <img alt="{{title}}" src="{{metas.image}}" class="post-cover">
           {{#excerpt body 80 '…'}}
         {{else}}
           {{#excerpt body 120 '…'}}
@@ -58,10 +58,10 @@
     {{/each}}
 
     {{#if has_pagination.prev}}
-      <a href="{{has_pagination.prevpage}}" class="pagination-arrow newer">Newer</a>
+      <a href="{{blog.url}}page/{{has_pagination.prevpage}}" class="pagination-arrow newer">Newer</a>
     {{/if}}
     {{#if has_pagination.next}}
-      <a href="{{has_pagination.nextpage}}" class="pagination-arrow older">Older</a>
+      <a href="{{blog.url}}page/{{has_pagination.nextpage}}" class="pagination-arrow older">Older</a>
     {{/if}}
 
   </section>

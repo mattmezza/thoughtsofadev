@@ -1,7 +1,14 @@
-title->Super Simple Backup System for Mysql and Ftp
-author->Matteo Merola
-tags->nerd, backup, mysql, KISS
-image->/public/content/backupsystem.jpg
+{
+  "title":"Super Simple Backup System for Mysql and Ftp",
+  "author":"admin",
+  "tags":[
+    "NERD",
+    "Backup",
+    "MySql",
+    "KISS"
+  ],
+  "image":"/public/content/backupsystem.jpg"
+}
 ---:endmetadata:---
 
 ## __A 'KeepItSuperSimple' backup system for mysql and ftp__

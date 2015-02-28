@@ -1,7 +1,13 @@
-title->Service Strategy (part 1)
-author->Matteo Merola
-tags->IT Service Management, ITIL, Service Strategy, Service Portfolio Management
-image->/public/content/service-strategy.jpg
+{
+  "title":"Service Strategy (part 1)",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "Service Portfolio Management"
+  ],
+  "image":"/public/content/service-strategy.jpg"
+}
 ---:endmetadata:---
 
 The goal of service strategy is to identify the competition (market focus) and to compete with them by distinguishing oneself from the rest and by delivering superior performances. *ITIL* cites the following building blocks of well-performing service providers:

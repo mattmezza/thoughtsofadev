@@ -1,7 +1,14 @@
-title->Introduction to IT Service Management
-author->Matteo Merola
-tags->IT Service Management, ITIL, Nolan, CMMI
-image->/public/content/cloud-solution2.jpg
+{
+  "title":"Introduction to IT Service Management",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "Nolan",
+    "CMMI"`
+  ],
+  "image":"/public/content/cloud-solution2.jpg"
+}
 ---:endmetadata:---
 
 # Why IT Service Management?

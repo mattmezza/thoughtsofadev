@@ -1,7 +1,16 @@
-title->FUNNYPICS my first YAPP
-author->Matteo Merola
-tags->YO, YAPPS, Funny, Pics, Development, Mobile
-image->/public/content/Yo.jpg
+{
+  "title":"FUNNYPICS my first YAPP",
+  "author":"admin",
+  "tags":[
+    "YO",
+    "YAPPS",
+    "Funny",
+    "Pics",
+    "Development",
+    "Mobile"
+  ],
+  "image":"/public/content/Yo.jpg"
+}
 ---:endmetadata:---
 
 > _What the hell is that?_

@@ -1,7 +1,14 @@
-title->Create vhosts easily with Apache and CentOS 7
-author->Matteo Merola
-tags->CentOS, apache, vhosts, hosting, webserver
-image->http://www.fastserverhosting.com/web.jpg
+{
+  "title":"Create vhosts easily with Apache and CentOS 7",
+  "author":"admin",
+  "tags":[
+    "CentOS",
+    "Apache",
+    "vhosts",
+    "SysAdmin"
+  ],
+  "image":"http://www.fastserverhosting.com/web.jpg"
+}
 ---:endmetadata:---
 
 Recently I bought a new __VPS server__ and I had to migrate my websites hosted in my old VPS into the new one.

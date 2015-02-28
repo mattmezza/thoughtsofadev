@@ -1,0 +1,15 @@
+{{#if post.metas.author}}
+<p>
+  <img src="{{blog.url}}public/content/author-pic-{{#lower post.metas.author.name}}.png" title="{{post.metas.author.name}}">
+</p>
+<p>
+  {{#if post.metas.author.bio}}
+    {{{post.metas.author.bio}}}
+  {{else}}
+    {{{blog.description}}}
+  {{/if}}
+{{else}}
+</p>
+  <img src="{{blog.url}}public/themes/swayze/assets/img/no-author-pic.png" title="{{blog.authors.admin.name}}">
+  <p>{{{blog.authors.admin.bio}}}</p>
+{{/if}}

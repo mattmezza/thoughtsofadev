@@ -1,7 +1,12 @@
-title->Service Design
-author->Matteo Merola
-tags->IT Service Management, ITIL, Service Design
-image->/public/content/Service-Design.jpg
+{
+  "title":"Service Design",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL"
+  ],
+  "image":"/public/content/Service-Design.jpg"
+}
 ---:endmetadata:---
 
 Service Design follows Service Strategy in the Service Lifecycle and it refers not only to completely new services but also to modified service delivery.

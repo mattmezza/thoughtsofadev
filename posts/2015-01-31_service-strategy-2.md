@@ -1,7 +1,16 @@
-title->Service Strategy (part 2)
-author->Matteo Merola
-tags->IT Service Management, ITIL, Service Strategy, Organization, Risk, Outsourcing
-image->/public/content/service-strategy-1.jpg
+{
+  "title":"Service Strategy (part 2)",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "Service Strategy",
+    "Organization",
+    "Risk",
+    "Outsourcing"
+  ],
+  "image":"/public/content/service-strategy-1.jpg"
+}
 ---:endmetadata:---
 
 ###### follows from [Service Strategy (part 1)](/2015/01/service-strategy-1)

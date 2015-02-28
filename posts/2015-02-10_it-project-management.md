@@ -1,7 +1,11 @@
-title->IT Project Management
-author->Matteo Merola
-tags->IT Project Management
-image->/public/content/IT-Project-Management.jpg
+{
+  "title":"IT Project Management",
+  "author":"admin",
+  "tags":[
+    "IT Project Management"
+  ],
+  "image":"/public/content/IT-Project-Management.jpg"
+}
 ---:endmetadata:---
 
 ### Context

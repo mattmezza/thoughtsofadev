@@ -1,7 +1,13 @@
-title->Standard ISO-IEC 20000
-author->Matteo Merola
-tags->IT Service Management, ITIL, ISO
-image->/public/content/sfondoHeaderBlog-1.jpg
+{
+  "title":"Standard ISO-IEC 20000",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "ISO"
+  ],
+  "image":"/public/content/sfondoHeaderBlog-1.jpg"
+}
 ---:endmetadata:---
 
 This is the first international standard on IT Service Management. It was developed in 2005 and revised in 2011 and it is based on the British Standard Institution's (BSI) BS 15000. It is composed of two parts: part 1 with the specification and part 2 with the code practice. We only focus on part 1.
@@ -12,7 +18,7 @@ The standard states that Demming's PDCA cycle can be applied to all processes.
 During the planning phase there shall be clear management direction and documented responsibilities for reviewing, authorising, communicating, implementing and maintaining the plans.
 During the 'do' phase, service provider shall implement the service management plan to manage and deliver services.
 In the checking phase, service provider shall apply suitable methods for monitoring and measurements of the service management process. These methods shall demonstrate the ability of the processes to achieve planned results. Management shall also conduct review at planned intervals.
-In the last 'act' phase, there shall be a published policy on service improvement and management shall collect and analyse data, identify, plan and impliement improvements, set targets in quality and always measure, report and communicate.
+In the last 'act' phase, there shall be a published policy on service improvement and management shall collect and analyse data, identify, plan and implement improvements, set targets in quality and always measure, report and communicate.
 
 # Service management processes according to the standard
 

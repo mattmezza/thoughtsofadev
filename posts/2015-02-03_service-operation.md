@@ -1,7 +1,14 @@
-title->Service Operation
-author->Matteo Merola
-tags->IT Service Management, ITIL, Service Operation, Service Desk
-image->/public/content/0842.jpg
+{
+  "title":"Service Operation",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "Service Operation",
+    "Service Desk"
+  ],
+  "image":"/public/content/0842.jpg"
+}
 ---:endmetadata:---
 
 The goals of Service Operation are to **co-ordinate and fulfill activities and processes** required to provide and manage services with a specified **agreed level**.

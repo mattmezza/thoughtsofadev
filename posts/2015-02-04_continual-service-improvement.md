@@ -1,7 +1,13 @@
-title->Continual Service Improvement
-author->Matteo Merola
-tags->IT Service Management, ITIL, Continual Service Improvement
-image->/public/content/maxresdefault.jpg
+{
+  "title":"Continual Service Improvement",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "Continual Service Improvement"
+  ],
+  "image":"/public/content/maxresdefault.jpg"
+}
 ---:endmetadata:---
 
 Nowadays IT departments must continually improve their services in order to remain appealing to the business. ITIL version 3 places this within the lifecycle phase of **Continual Service Improvement**.

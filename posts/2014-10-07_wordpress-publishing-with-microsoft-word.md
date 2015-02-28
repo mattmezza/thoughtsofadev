@@ -1,7 +1,14 @@
-title->WordPress publishing with Microsoft Word™
-author->Matteo Merola
-tags->Microsoft, Word, Wordpress, Download
-image->http://thedigitalhippies.com/wp-content/uploads/2013/03/Microsoft-Word-2013.png
+{
+  "title":"WordPress publishing with Microsoft Word™",
+  "author":"admin",
+  "tags":[
+    "Microsoft",
+    "Word",
+    "Wordpress",
+    "Download"
+  ],
+  "image":"http://thedigitalhippies.com/wp-content/uploads/2013/03/Microsoft-Word-2013.png"
+}
 ---:endmetadata:---
 
 ## Eureka!

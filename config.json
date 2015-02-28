@@ -6,41 +6,79 @@
             "url": "http://bloggy.dev/",
             "title": "Thoughts of a Dev",
             "description": "Impressions and feelings about software and development.",
-            "author": {
+            "authors": {
+              "admin": {
                 "name": "Matteo Merola",
-                "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+                "bio": "I really like to help people to achieve their goals with the maximum result and the minimum effort. I believe in Open Source software and I always try to put me into the game of making software development and software products better. I like to design, develop and mantain large software systems. What makes me really happy is to see people use what I create.",
                 "twitter": "_mattmezza_",
-                "facebook": "matteo.merola"
+                "facebook": "matteo.merola",
+                "email": "mattmezza@gmail.com"
+              },
+              "id-of-an-author": {
+                "name": "John Doe",
+                "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+                "twitter": "jhonny",
+                "facebook": "john.doe",
+                "email": "john@doe.com"
+              }
             },
-            "theme": "default",
+            "theme": "swayze",
             "posts": {
                 "dir": "posts",
                 "draftdir": "drafts",
                 "perpage": 5
             },
-            "cache": false
+            "pages": {
+              "dir": "pages"
+            },
+            "navigation": [
+              {"url": "/","label": "Blog"},
+              {"url": "/shortcode","label": "Shortcode"},
+              {"url": "http://matteomerola.me","label": "Me"},
+              {"url": "https://github.com/mattmezza/thoughtsofadev","label": "Write a post"},
+              {"url": "mailto:mattmezza@gmail.com?subject=Contact from your blog","label": "Contact me"}
+            ]
         }
     },
     "production": {
-        "blog": {
-            "timezone": "Europe/Rome",
-            "locale": "en_US.UTF-8",
-            "url": "http://blog.matteomerola.me/",
-            "title": "Thoughts of a Dev",
-            "description": "Impressions and feelings about software and development.",
-            "author": {
-                "name": "Matteo Merola",
-                "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
-                "twitter": "_mattmezza_",
-                "facebook": "matteo.merola"
+      "blog": {
+          "timezone": "Europe/Rome",
+          "locale": "en_US.UTF-8",
+          "url": "http://blog.matteomerola.me/",
+          "title": "Thoughts of a Dev",
+          "description": "Impressions and feelings about software and development.",
+          "authors": {
+            "admin": {
+              "name": "Matteo Merola",
+              "bio": "I really like to help people to achieve their goals with the maximum result and the minimum effort. I believe in Open Source software and I always try to put me into the game of making software development and software products better. I like to design, develop and mantain large software systems. What makes me really happy is to see people use what I create.",
+              "twitter": "_mattmezza_",
+              "facebook": "matteo.merola",
+              "email": "mattmezza@gmail.com"
             },
-            "theme": "default",
-            "posts": {
-                "dir": "posts",
-                "draftdir": "drafts",
-                "perpage": 5
-            },
-            "cache": true
-        }
+            "id-of-an-author": {
+              "name": "John Doe",
+              "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+              "twitter": "jhonny",
+              "facebook": "john.doe",
+              "email": "john@doe.com"
+            }
+          },
+          "theme": "default",
+          "posts": {
+              "dir": "posts",
+              "draftdir": "drafts",
+              "perpage": 5
+          },
+          "pages": {
+            "dir": "pages"
+          },
+          "navigation": [
+            {"url": "/","label": "Blog"},
+            {"url": "/shortcode","label": "Shortcode"},
+            {"url": "http://matteomerola.me","label": "Me"},
+            {"url": "https://github.com/mattmezza/thoughtsofadev","label": "Write a post"},
+            {"url": "mailto:mattmezza@gmail.com?subject=Contact from your blog","label": "Contact me"}
+          ]
+      }
     }
 }

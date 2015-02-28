@@ -1,7 +1,14 @@
-title->Service Transition
-author->Matteo Merola
-tags->IT Service Management, ITIL, Service Transition, Change Management
-image->/public/content/Gr8-marbleMoTen.JPG
+{
+  "title":"Service Transition",
+  "author":"admin",
+  "tags":[
+    "IT Service Management",
+    "ITIL",
+    "Service Transition",
+    "Change Management"
+  ],
+  "image":"/public/content/Gr8-marbleMoTen.JPG"
+}
 ---:endmetadata:---
 
 > How to put the output of the Service Design phase into practice...

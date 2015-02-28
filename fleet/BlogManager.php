@@ -10,12 +10,45 @@ class BlogManager {
   private $postPerPage;
   private $siteUrl;
   private $cache;
+  private $pageDir;
+  private $authors;
 
-  public function __construct($articleDir, $postPerPage, $siteUrl, $cache) {
-    $this->articleDir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $articleDir . DIRECTORY_SEPARATOR;
-    $this->postPerPage = $postPerPage;
-    $this->siteUrl = $siteUrl;
-    $this->cache = $cache;
+  public function __construct($config) {
+    $this->articleDir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $config->blog->posts->dir . DIRECTORY_SEPARATOR;
+    $this->postPerPage = $config->blog->posts->perpage;
+    $this->siteUrl = $config->blog->url;
+    $this->cache = $config->blog->cache;
+    $this->pageDir = $config->blog->pages->dir;
+    $this->authors = $config->blog->authors;
+  }
+
+  public function get_page($pageName) {
+    $filePath = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $this->pageDir . DIRECTORY_SEPARATOR . $pageName . ".md";
+    $page = new \stdClass;
+    $parsedown = new ParsedownExtra();
+    if(!file_exists($filePath))
+      return;
+    $pageContent = file_get_contents($filePath);
+    $matches = array();
+    preg_match('/[\s\S]*[-]+:endmetadata:[-]+/', $pageContent, $matches);
+    # if we have metadata defined
+    if(count($matches)>0){
+      $metadata = preg_replace('/[-]+:endmetadata:[-]+/', "", $matches[0]);
+      $page->metas = json_decode($metadata);
+      $pageContent = preg_replace('/[\s\S]*[-]+:endmetadata:[-]+/', "", $pageContent);
+      $content = $parsedown->text($pageContent);
+      $page->title = $page->metas->title;
+    } else {
+      // Get the contents and convert it to HTML
+      $content = $parsedown->text($pageContent);
+      // Extract the title and body
+      $arr = explode('</h1>', $content);
+      $page->title = str_replace('<h1>','',$arr[0]);
+      $content = $arr[1];
+    }
+    $page->url = $this->siteUrl . $pageName;
+    $page->body = $content;
+    return $page;
   }
 
   public function get_post_links() {
@@ -67,89 +100,30 @@ class BlogManager {
       // The post URL
       $post->url = $this->siteUrl . date('Y/m', $post->date).'/'.str_replace('.md','',$arr[1]);
 
-      if($this->cache) {
-        if(file_exists($v.".html")) {
-          $postContent = file_get_contents($v.".html");
-        } else {
-          $postContent = file_get_contents($v);
-        }
-      } else {
-        $postContent = file_get_contents($v);
-      }
+      $postContent = file_get_contents($v);
       $matches = array();
-      $toCache = "";
       preg_match('/[\s\S]*[-]+:endmetadata:[-]+/', $postContent, $matches);
       # if we have metadata defined
       if(count($matches)>0){
         $toCache = $matches[0]."\n";
         $metadata = preg_replace('/[-]+:endmetadata:[-]+/', "", $matches[0]);
-        $metas = explode("\n", $metadata);
-        $metas = array_slice($metas, 0, count($metas) -1);
-        foreach($metas as $meta) {
-          $bits = explode("->", $meta);
-          if($bits[0]=="tags") {
-            $post->tags = array();
-            $tags = explode(", ", $bits[1]);
-            foreach($tags as $tag) {
-              $post->tags[] = $tag;
-            }
-          } else if($bits[0] == "author") {
-            $post->author = $bits[1];
-            $biofile = dirname($this->articleDir) . DIRECTORY_SEPARATOR . 'biographies' . DIRECTORY_SEPARATOR . $bits[1] . ".md";
-            if(file_exists($biofile)) {
-              if($this->cache) {
-                $m = array();
-                preg_match('/[-]+:startbio:[-]+[\s\S]*[-]+:endbio:[-]+/', $postContent, $m);
-                if(count($m)>0) {
-                  // bio is cached...extracting
-                  $post->authorbio = preg_replace('/[-]+:((start)|(end))bio:[-]+/', "", $m[0]);
-                  $postContent = preg_replace('/[-]+:startbio:[-]+[\s\S]*[-]+:endbio:[-]+/', "", $postContent);
-                } else {
-                  $post->authorbio = $parsedown->text(file_get_contents($biofile));
-                  $toCache .= "---:startbio:---\n".$post->authorbio."\n---:endbio:---\n";
-                }
-              } else {
-                $post->authorbio = $parsedown->text(file_get_contents($biofile));
-              }
-            }
-          } else {
-            $key = $bits[0];
-            $value = $bits[1];
-            $post->{$key} = $value;
-          }
+        $post->metas = json_decode($metadata);
+        if($post->metas->title)
+          $post->title = $post->metas->title;
+        if($post->metas->author) {
+          if($this->authors->{$post->metas->author})
+            $post->metas->author = $this->authors->{$post->metas->author};
         }
         $postContent = preg_replace('/[\s\S]*[-]+:endmetadata:[-]+/', "", $postContent);
-        if($this->cache) {
-          if(!file_exists($v.".html")) {
-            $content = $parsedown->text($postContent);
-            // write cache file
-            file_put_contents($v.".html", $toCache.$content);
-          } else {
-            $content = $postContent;
-          }
-        } else {
-          // Get the contents and convert it to HTML
-          $content = $parsedown->text($postContent);
-        }
+        // Get the contents and convert it to HTML
+        $content = $parsedown->text($postContent);
       } else {
-        if($this->cache) {
-          if(!file_exists($v.".html")) {
-            $content = $parsedown->text($postContent);
-            // Extract the title and body
-            $arr = explode('</h1>', $content);
-            $post->title = str_replace('<h1>','',$arr[0]);
-            $content = $arr[1];
-            // write cache file
-            file_put_contents($v.".html", $content);
-          }
-        } else {
-          // Get the contents and convert it to HTML
-          $content = $parsedown->text($postContent);
-          // Extract the title and body
-          $arr = explode('</h1>', $content);
-          $post->title = str_replace('<h1>','',$arr[0]);
-          $content = $arr[1];
-        }
+        // Get the contents and convert it to HTML
+        $content = $parsedown->text($postContent);
+        // Extract the title and body
+        $arr = explode('</h1>', $content);
+        $post->title = str_replace('<h1>','',$arr[0]);
+        $content = $arr[1];
       }
       $post->body = $content;
       $tmp[] = $post;
@@ -159,18 +133,14 @@ class BlogManager {
 
   // Find post by year, month and name
   function find_post($year, $month, $name){
-
     foreach($this->get_post_names() as $index => $v){
       if( strpos($v, "$year-$month") !== false && strpos($v, $name.'.md') !== false){
-
         // Use the get_posts method to return
         // a properly parsed object
-
         $arr = $this->get_posts($index+1,1);
         return $arr[0];
       }
     }
-
     return false;
   }
 
@@ -178,7 +148,6 @@ class BlogManager {
   // to show the pagination buttons
   public function has_pagination($page = 1){
     $total = count($this->get_post_names());
-
     return array(
       'prev'=> $page > 1,
       'prevpage'=>$page-1,
