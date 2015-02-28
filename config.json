@@ -22,7 +22,7 @@
                 "email": "john@doe.com"
               }
             },
-            "theme": "swayze",
+            "theme": "default",
             "posts": {
                 "dir": "posts",
                 "draftdir": "drafts",
