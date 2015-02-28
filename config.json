@@ -16,7 +16,7 @@
               },
               "id-of-an-author": {
                 "name": "John Doe",
-                "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+                "bio": "Crafted by <a href='https://twitter.com/@_mattmezza_'><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href='http://tutorialzine.com/2013/03/simple-php-blogging-system/' target='__NEW'>tutzine</a>",
                 "twitter": "jhonny",
                 "facebook": "john.doe",
                 "email": "john@doe.com"
@@ -57,7 +57,7 @@
             },
             "id-of-an-author": {
               "name": "John Doe",
-              "bio": "Crafted by <a href=\"https://twitter.com/@_mattmezza_\"><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href=\"http://tutorialzine.com/2013/03/simple-php-blogging-system/\" target=\"__NEW\">tutzine</a>",
+              "bio": "Crafted by <a href='https://twitter.com/@_mattmezza_'><b>@mattmezza</b></a> with ❤️. Based on a prototype by <a href='http://tutorialzine.com/2013/03/simple-php-blogging-system/' target='__NEW'>tutzine</a>",
               "twitter": "jhonny",
               "facebook": "john.doe",
               "email": "john@doe.com"
