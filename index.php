@@ -1,8 +1,6 @@
 <?php
 require_once 'vendor/autoload.php';
-use \Fleet\Utils as Utils;
-use \Fleet\BlogManager;
-use \Fleet\BlogRsser;
+use \Bloggy\BlogManager;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
 use \Suin\RSSWriter\Feed;
