@@ -17,7 +17,6 @@ class BlogManager {
     $this->articleDir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $config->blog->posts->dir . DIRECTORY_SEPARATOR;
     $this->postPerPage = $config->blog->posts->perpage;
     $this->siteUrl = $config->blog->url;
-    $this->cache = $config->blog->cache;
     $this->pageDir = $config->blog->pages->dir;
     $this->authors = $config->blog->authors;
   }
