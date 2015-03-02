@@ -33,9 +33,9 @@
             "navigation": [
               {"url": "/","label": "Blog"},
               {"url": "/shortcode","label": "Shortcode"},
-              {"url": "http://matteomerola.me","label": "Me"},
+              {"url": "http://matteomerola.me","label": "About Me"},
               {"url": "https://github.com/mattmezza/thoughtsofadev","label": "Write a post"},
-              {"url": "mailto:mattmezza@gmail.com?subject=Contact from your blog","label": "Contact me"}
+              {"url": "http://matteomerola.me/en#contact","label": "Contact me"}
             ]
         }
     },
@@ -73,9 +73,9 @@
           "navigation": [
             {"url": "/","label": "Blog"},
             {"url": "/shortcode","label": "Shortcode"},
-            {"url": "http://matteomerola.me","label": "Me"},
+            {"url": "http://matteomerola.me","label": "About Me"},
             {"url": "https://github.com/mattmezza/thoughtsofadev","label": "Write a post"},
-            {"url": "mailto:mattmezza@gmail.com?subject=Contact from your blog","label": "Contact me"}
+            {"url": "http://matteomerola.me/en#contact","label": "Contact me"}
           ]
       }
     }
