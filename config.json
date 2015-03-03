@@ -67,7 +67,7 @@
               "email": "john@doe.com"
             }
           },
-          "theme": "default",
+          "theme": "matteomerola",
           "posts": {
               "dir": "posts",
               "perpage": 5
