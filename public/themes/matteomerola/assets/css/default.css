@@ -25,7 +25,7 @@ e. Others
  ------------------------------------------------------------------ */
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Raleway:400,700,900");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext");
 
 /* ------------------------------------------------------------------
 /* b. Reset
@@ -181,8 +181,8 @@ p.lead {
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
-em { font: 15px/30px 'opensans-italic', sans-serif; }
-strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
+em { font: italic 15px/30px 'Open Sans', sans-serif;}
+strong, b { font: bold 15px/30px 'Open Sans', sans-serif;}
 small { font-size: 11px; line-height: inherit; }
 
 /*	Blockquotes */
@@ -805,7 +805,3 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
-
-
-

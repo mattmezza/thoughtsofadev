@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <!--- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Oops... | {{blog.title}}</title>
+  <meta name="author" content="{{blog.authors.admin.name}}">
+
+  <meta name="description" content="{{blog.description}}" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{blog.title}} Feed" href="{{blog.url}}rss" />
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/default.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/style.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/responsive.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/animate.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/modernizr.js"></script>
+
+   <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+<body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    {{> nav}}
+
+    {{!> header}}
+
+    <section id="resume">
+     <h1 class="section-title wow fadeInDown" style="margin-bottom: -20px;">Oops... We're sorry</h1>
+     <br>
+
+       <div class="row">
+         <div class="twelve columns main-col" style="padding-right: 0;">
+            <div>
+              <div class="wow zoomInUp animated" style="text-align: center;">
+                <p style="height: 50px;"></p>
+                <h3>I cannot find what you were looking for...</h3>
+                <h2>But I found this... and I hope you female readers like it</h2>
+                <p style="height: 30px;"></p>
+                <img alt="sexy girl" src="{{blog.url}}public/themes/{{blog.theme}}/assets/img/boy.png">
+                <br>
+                <p style="margin-top: 50px;"><a class="button" href="{{blog.url}}" style="color: #fff;">Go to Blog</a></p>
+              </div>
+            </div>
+         </div>
+        </div>
+        <br>
+    </section>
+
+   {{!> comments}}
+
+   {{> footer}}
+
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/jquery-2.1.1.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/owl-carousel/owl.carousel.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/waypoints.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/jquery.fittext.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/magnific-popup.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/wow.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/jquery.nicescroll.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/script.js"></script>
+</body>
+</html>
