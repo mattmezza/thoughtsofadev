@@ -1,0 +1,15 @@
+<section id="resume">
+  <div class="row download">
+    <div class="two columns download">
+      {{#if has_pagination.prev}}
+        <a href="{{blog.url}}page/{{has_pagination.prevpage}}" class="button" style="color: #fff;"><i class="fa fa-arrow-left"></i> Newer</a>
+      {{/if}}
+    </div>
+    <div class="eight columns"></div>
+    <div class="two columns download right">
+      {{#if has_pagination.next}}
+        <a href="{{blog.url}}page/{{has_pagination.nextpage}}" class="button" style="color: #fff;">Older <i class="fa fa-arrow-right"></i></a>
+      {{/if}}
+    </div>
+  </div>
+</section>

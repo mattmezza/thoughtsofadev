@@ -6,13 +6,15 @@
             "url": "http://bloggy.dev/",
             "title": "Thoughts of a Dev",
             "description": "Impressions and feelings about software and development.",
+            "logo": "logo.png",
             "authors": {
               "admin": {
                 "name": "Matteo Merola",
                 "bio": "I really like to help people to achieve their goals with the maximum result and the minimum effort. I believe in Open Source software and I always try to put me into the game of making software development and software products better. I like to design, develop and mantain large software systems. What makes me really happy is to see people use what I create.",
                 "twitter": "_mattmezza_",
                 "facebook": "matteo.merola",
-                "email": "mattmezza@gmail.com"
+                "email": "mattmezza@gmail.com",
+                "pic": "admin.png"
               },
               "id-of-an-author": {
                 "name": "John Doe",
@@ -22,7 +24,7 @@
                 "email": "john@doe.com"
               }
             },
-            "theme": "default",
+            "theme": "matteomerola",
             "posts": {
                 "dir": "posts",
                 "perpage": 5
@@ -31,11 +33,12 @@
               "dir": "pages"
             },
             "navigation": [
-              {"url": "/","label": "Blog"},
-              {"url": "/shortcode","label": "Shortcode"},
-              {"url": "http://matteomerola.me","label": "About Me"},
-              {"url": "https://github.com/mattmezza/thoughtsofadev","label": "Write a post"},
-              {"url": "http://matteomerola.me/en#contact","label": "Contact me"}
+              {"url": "http://matteomerola.dev/en","label": "Home"},
+              {"url": "http://matteomerola.dev/en#about","label": "About Me"},
+              {"url": "http://matteomerola.dev/en#resume","label": "Resume"},
+              {"url": "http://matteomerola.dev/en#portfolio","label": "Portfolio"},
+              {"url": "http://matteomerola.dev/en#contact","label": "Contact"},
+              {"url": "http://bloggy.dev","label": "Blog"}
             ]
         }
     },
@@ -46,13 +49,15 @@
           "url": "http://blog.matteomerola.me/",
           "title": "Thoughts of a Dev",
           "description": "Impressions and feelings about software and development.",
+          "logo": "logo.png",
           "authors": {
             "admin": {
               "name": "Matteo Merola",
               "bio": "I really like to help people to achieve their goals with the maximum result and the minimum effort. I believe in Open Source software and I always try to put me into the game of making software development and software products better. I like to design, develop and mantain large software systems. What makes me really happy is to see people use what I create.",
               "twitter": "_mattmezza_",
               "facebook": "matteo.merola",
-              "email": "mattmezza@gmail.com"
+              "email": "mattmezza@gmail.com",
+              "pic": "admin.png"
             },
             "id-of-an-author": {
               "name": "John Doe",
@@ -71,11 +76,12 @@
             "dir": "pages"
           },
           "navigation": [
-            {"url": "/","label": "Blog"},
-            {"url": "/shortcode","label": "Shortcode"},
-            {"url": "http://matteomerola.me","label": "About Me"},
-            {"url": "https://github.com/mattmezza/thoughtsofadev","label": "Write a post"},
-            {"url": "http://matteomerola.me/en#contact","label": "Contact me"}
+            {"url": "http://matteomerola.me/en","label": "Home"},
+            {"url": "http://matteomerola.me/en#about","label": "About Me"},
+            {"url": "http://matteomerola.me/en#resume","label": "Resume"},
+            {"url": "http://matteomerola.me/en#portfolio","label": "Portfolio"},
+            {"url": "http://matteomerola.me/en#contact","label": "Contact"},
+            {"url": "http://blog.matteomerola.me","label": "Blog"}
           ]
       }
     }

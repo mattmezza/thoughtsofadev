@@ -5,12 +5,11 @@
     "IT Service Management",
     "ITIL",
     "Nolan",
-    "CMMI"`
+    "CMMI"
   ],
   "image":"/public/content/cloud-solution2.jpg"
 }
 ---:endmetadata:---
-
 # Why IT Service Management?
 
 Development in IT have had a tremendous effect on the business market during the last decades. We got from the Industrial age to the Information age! Most companies, nowadays, switched from a traditional hierarchical organization towards a process-oriented organization and project-oriented IT organization. With this configuration, processes must be organized to support a customer-oriented approach: there's the need for a Business-IT alignment!

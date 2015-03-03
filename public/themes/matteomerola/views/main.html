@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <!--- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>{{blog.title}}</title>
+  <meta name="author" content="{{blog.authors.admin.name}}">
+
+  <meta name="description" content="{{blog.description}}" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{blog.title}} Feed" href="{{blog.url}}rss" />
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/default.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/style.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/responsive.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/animate.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/js/owl-carousel/owl.carousel.css">
+   <link rel="stylesheet" href="{{blog.url}}public/themes/{{blog.theme}}/assets/js/owl-carousel/owl.theme.css">
+
+   <!-- Script
+   ================================================== -->
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/modernizr.js"></script>
+
+   <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+<body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    {{> nav}}
+
+    {{> header}}
+
+    {{#each posts}}
+    <section id="resume">
+     <h1 class="section-title wow fadeInDown"><a href="{{url}}">{{title}}</a></h1>
+
+       <div class="row">
+
+          <div class="three columns header-col">
+            {{#if metas.author}}<h2><span>{{metas.author.name}}</span></h2>{{/if}}
+            <div style="font-style: italic;">{{#format_date_with_locale date '%A %e %B %Y'}}</div>
+            {{#if metas.tags}}
+              <div class="tags">
+                <ul style="list-style: none;">
+                  {{#each metas.tags}}
+                    <li>
+                      {{{.}}}
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            {{/if}}
+          </div>
+
+         <div class="nine columns main-col">
+            <div class="wow fadeInUp animated">
+              {{#if metas.image}}
+                <img alt="{{title}}" src="{{metas.image}}" class="post-cover">
+                {{#excerpt body 80 '…'}}
+              {{else}}
+                {{#excerpt body 120 '…'}}
+              {{/if}}
+              &nbsp;<a href="{{url}}">Read more</a>
+            </div>
+         </div>
+        </div>
+        <br>
+    </section>
+
+    {{/each}}
+
+    {{> pagination}}
+
+    <section id="call-to-action">
+      <div class="row">
+         <div class="two columns header-col">
+            <h1 class="wow zoomIn animated">
+              <span><i class="fa fa-heart fa-5x pull-left fa-fw"></i></span>
+            </h1>
+         </div>
+         <div class="seven columns">
+            <h2 class="wow bounceInLeft animated">Do you like?</h2>
+            <p class="wow bounceInRight animated">Drop me a line just to let me know you like (or you don't XD) this blog ;)</p>
+         </div>
+         <div class="three columns action wow zoomIn animated">
+            <a href="#contact" class="button wow fadeInRight animated"><i class="fa fa-paper-plane"></i> Contact me</a>
+         </div>
+      </div>
+   </section>
+
+   {{> comments}}
+
+   {{> footer}}
+
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/jquery-2.1.1.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/owl-carousel/owl.carousel.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/waypoints.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/jquery.fittext.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/magnific-popup.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/wow.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/jquery.nicescroll.min.js"></script>
+  <script src="{{blog.url}}public/themes/{{blog.theme}}/assets/js/script.js"></script>
+</body>
+</html>

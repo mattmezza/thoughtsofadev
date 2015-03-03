@@ -1,0 +1,9 @@
+<nav id="m-nav" class="opaque" style="display: block;">
+  <a class="mobile-btn" href="#m-nav" title="Show navigation">Show navigation</a>
+  <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+   <ul id="nav" class="nav">
+     {{#each blog.navigation}}
+      <li class=""><a href="{{url}}">{{label}}</a></li>
+     {{/each}}
+   </ul>
+</nav>
