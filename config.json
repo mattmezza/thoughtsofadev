@@ -3,7 +3,7 @@
         "blog": {
             "timezone": "Europe/Rome",
             "locale": "it_IT.UTF-8",
-            "url": "http://bloggy.dev/",
+            "url": "http://blog.matteomerola.dev/",
             "title": "Thoughts of a Dev",
             "description": "Impressions and feelings about software and development.",
             "logo": "logo.png",
@@ -38,7 +38,7 @@
               {"url": "http://matteomerola.dev/en#resume","label": "Resume"},
               {"url": "http://matteomerola.dev/en#portfolio","label": "Portfolio"},
               {"url": "http://matteomerola.dev/en#contact","label": "Contact"},
-              {"url": "http://bloggy.dev","label": "Blog"}
+              {"url": "http://blog.matteomerola.dev/","label": "Blog"}
             ]
         }
     },
