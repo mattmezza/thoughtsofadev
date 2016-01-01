@@ -44,18 +44,6 @@ body { background: #0f0f0f; overflow-y: hidden; text-align: justify;}
   -o-transition: all .3s;
 }
 
-.section-title:after {
-  background: none repeat scroll 0 0 #fff;
-  bottom: -15px;
-  color: #333;
-  content: "\f0a7";
-  left: 45%;
-  line-height: 1px;
-  padding: 15px 5px;
-  position: absolute;
-  font-family: "FontAwesome";
-}
-
 /* ------------------------------------------------------------------ */
 /* 2. Preloader CSS */
 /* ------------------------------------------------------------------ */
@@ -147,7 +135,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
    z-index: 1;
    position: relative;
@@ -400,14 +388,6 @@ ul#nav li a:hover {
   text-align: center;
 }
 
-
-
-#about .section-title:after {
-  background: rgba(0,0,0,0.2);
-  color: #fff;
-  content: "\f007";
-}
-
 #about p {
    line-height: 30px;
    color: #fff;
@@ -559,12 +539,6 @@ ul#nav li a:hover {
    font-weight: 700;
    text-transform: uppercase;
    color: #666;
-}
-
-#resume .section-title:after {
-  background: #fff;
-  color: #666;
-  content: "\f02d";
 }
 
 
@@ -889,13 +863,6 @@ ul#nav li a:hover {
    border-color: #ddd;
 }
 
-#portfolio .section-title:after {
-  background: transparent;
-  content: "\f0b1";
-  color: #fff;
-}
-
-
 .btn-close {
   background: #ed5565;
 }
@@ -1143,14 +1110,6 @@ ul#nav li a:hover {
   display: block;
 }
 
-#testimonials .section-title:after {
-  background: #F1F1F1;
-  content: "\f0e6";
-  color: #95A3A3;
-}
-
-
-
 #testimonials .header-col {
   padding-top: 9px;
 }
@@ -1206,13 +1165,6 @@ ul#nav li a:hover {
 #contact h1:hover {
    border-color: #fff;
  }
-
-#contact .section-title:after {
-  background: #191919;
-  content: "\f003";
-  color: #888;
-}
-
 
 #contact h4 {
    font: 16px/24px 'Open Sans', sans-serif;
