@@ -26,7 +26,7 @@ I decided to give a try to _Texpad_ from the Mac App Store, a very good and comp
 
 > But, eventually, every trial comes to an end.
 
-_Texpad_ costs _24.99 €_, and that is too much for my poor and empty pockets. Of course I have tried to download a cracked version of it!!! I am joking 👼 (no I'm not 😈).
+_Texpad_ costs _27.99 €_, and that is too much for my poor and empty pockets. Of course I have tried to download a cracked version of it!!! I am joking 👼 (no I'm not 😈).
 
 Then, I said to myself: "Hey you, why don't you try to customize Atom, it is a very good editor for development and it has a plethora of very well done packages that could help you with almost everything!". And so I did. I'm writing this blog post to share my set up with you in case you are in the same position in which I was some days ago.
 
