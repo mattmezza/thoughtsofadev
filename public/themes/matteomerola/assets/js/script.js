@@ -8,13 +8,13 @@
 /* Preloader
 ------------------------------------------------------ */
 
-  $(window).load(function(){
-
-    $('.loader').fadeOut();
-    $('#preloader').delay(350).fadeOut('slow');
-    $('body').delay(350);
-
-    });
+  // $(window).load(function(){
+  //
+  //   $('.loader').fadeOut();
+  //   $('#preloader').delay(350).fadeOut('slow');
+  //   $('body').delay(350);
+  //
+  //   });
 
 
  jQuery(document).ready(function($) {
@@ -257,5 +257,20 @@ function parallax() {
       return false;
    });
 
+   var important_notice = $('#important-notice');
+   if (important_notice.length) {
 
+     setTimeout(function() {
+       $("#m-nav").animate({top: "20px"}, 1000, "linear");
+       important_notice.animate({top: "0px"}, 1000, "linear");
+       $("#about .bio-inner").animate({"padding-top": "20px"}, 1000, "linear");
+       $("#notice-close-btn").click(function() {
+          important_notice.animate({top: "-20px"}, 1000, "linear");
+          $("#m-nav").animate({top: "0px"}, 1000, "linear");
+          $("#about .bio-inner").animate({"padding-top": "0px"}, 1000, "linear");
+          return false;
+       });
+     }, 1000);
+
+   }
 });
