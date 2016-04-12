@@ -5,7 +5,7 @@
     "Berlin",
     "Germany"
   ],
-  "image":"/public/content/header-atom-for-latex.png"
+  "image":"/public/content/berlin.jpg"
 }
 ---:endmetadata:---
 Hey there! Recently I got a new job in Berlin where I have moved some days ago.
